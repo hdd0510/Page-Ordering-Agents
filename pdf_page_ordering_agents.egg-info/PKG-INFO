@@ -1,0 +1,87 @@
+Metadata-Version: 2.4
+Name: pdf-page-ordering-agents
+Version: 1.0.0
+Summary: Advanced PDF processing with page ordering using AI agents
+Home-page: https://github.com/dinzdzun/pdf-page-ordering-agents
+Author: dinzdzun
+Author-email: dinz@example.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Text Processing :: Filters
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi==0.104.1
+Requires-Dist: uvicorn[standard]==0.24.0
+Requires-Dist: python-multipart==0.0.6
+Requires-Dist: PyMuPDF==1.23.14
+Requires-Dist: pytesseract==0.3.10
+Requires-Dist: Pillow==10.1.0
+Requires-Dist: opencv-python==4.8.1.78
+Requires-Dist: langchain<0.2.0,>=0.1.0
+Requires-Dist: langchain-google-genai>=0.0.5
+Requires-Dist: google-generativeai>=0.3.2
+Requires-Dist: langchain-core<0.4.0,>=0.1.7
+Requires-Dist: langsmith>=0.0.77
+Requires-Dist: langgraph==0.0.20
+Requires-Dist: pydantic>=2.5.2
+Requires-Dist: numpy==1.24.3
+Requires-Dist: python-dotenv==1.0.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.4.3; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.21.1; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: flake8>=6.0.0; extra == "dev"
+Requires-Dist: isort>=5.12.0; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# PDF Page Ordering Agents
+
+Advanced PDF processing with AI-powered page ordering capabilities.
+
+## Features
+
+- OCR processing for scanned PDFs
+- Intelligent page ordering for unorganized documents
+- FastAPI web service with simple endpoints
+- Support for both text-based and scanned PDFs
+
+## Installation
+
+```bash
+pip install -e .
+```
+
+## API Endpoints
+
+- `/process-pdf`: Process PDF and return ordered pages
+- `/analyze-pdf`: Analyze PDF structure without ordering
+- `/health`: Health check endpoint
+
+## Usage
+
+Start the API server:
+
+```bash
+python -m src.api.main
+```
+
+The API will be available at http://localhost:8000
+
+## License
+
+MIT 
